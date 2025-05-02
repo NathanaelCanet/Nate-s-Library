@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Search Results for "{{ query }}" in {{ search_type }}</h1>
+
+{% if results %}
+    <ul>
+        {% for result in results %}
+            <li>
+                {% if search_type == 'books' %}
+                    <strong>{{ result.title }}</strong> - {{ result.author_name }} - {{ result.category_name }}
+                {% elif search_type == 'categories' %}
+                    <strong>{{ result.category_name }}</strong>
+                {% elif search_type == 'authors' %}
+                    <strong>{{ result.author_name }}</strong>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found for "{{ query }}" in {{ search_type }}.</p>
+{% endif %}
+{% endblock content %}

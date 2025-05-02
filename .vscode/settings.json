@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "Techno2_project",
+            "username": "anonyme",
+            "name": "Ti2_project",
+            "password": "anonyme"
+        }
+    ]
+}

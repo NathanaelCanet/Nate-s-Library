@@ -1,0 +1,108 @@
+/* ============================================================
+   Custom CSS for Nate's Library
+   File: custom.css
+   Author: Nathanaël Canet
+   Description: Customs personnalisés pour le projet Flask
+   ============================================================ */
+
+
+/* ===========================
+   1. Custom Navbar Styles
+   =========================== */
+.navbar-brand {
+    width: 15vw;
+}
+
+a.nav-link.active {
+    font-family: TripSans-Medium !important;
+    font-size: 1em !important;
+    color: #000000 !important;
+    display: block;
+    padding: 10px 15px !important;
+    border-radius: 10px;
+}
+
+a.nav-link.active:hover {
+    background-color: #f2f2f2 !important;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.p-0 {
+    width: 70%;
+}
+
+div.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.btn {
+    font-family: TripSans-Medium !important;
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    text-wrap: nowrap;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+a.btn:hover {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+
+i.fa-regular.fa-heart {
+    padding: 10px 15px !important;
+   
+    color: #000000;
+    /* outline effect */
+    transition: color 0.3s, text-shadow 0.3s;
+    font-size: 1.4em;
+    /* optional, for visibility */
+    cursor: pointer;
+}
+
+i.fa-regular.fa-heart:hover {
+    color: #33E0A1;
+
+}
+
+/* ===========================
+   2. Custom Search Bar Styles
+   =========================== */
+
+form.form-inline {
+    height: max-content;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        0 -1px 3px rgba(0, 0, 0, 0.2),
+        /* Top shadow (stronger and larger) */
+        0 1px 3px rgba(0, 0, 0, 0.2),
+        /* Bottom shadow (stronger and larger) */
+        0 3px 5px rgba(0, 0, 0, 0.2);
+    /* Bottom shadow (1px lower + slightly stronger) */
+    border-radius: 30px;
+}
+
+
+input.form-control.mr-sm-2 {
+    outline: none !important;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    height: 50px;
+    /* Adjust height */
+    padding: 10px;
+    /* Inner spacing */
+    margin: 10px;
+    font-size: 0.8em;
+    font-family: TripSans-Regular !important;
+    /* Text size */
+}
+
+.form-control.mr-sm-2:focus {
+    outline: none;}

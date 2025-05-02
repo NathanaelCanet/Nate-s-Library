@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
+            {% for cat in categories: %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img loading="lazy" src="/static/images/categories/{{ cat.category_image_url }}" alt="image" />
+                    <div class="card-body">
+                        <p class="card-text">
+                            <span class="titre">
+                                <a href="{{ url_for('books_category') }}?category_name={{ cat.category_name }}">{{
+                                    cat.category_name}}</a>
+                            </span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" id="remove_a">
+                            </div>
+                            <div class="btn-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

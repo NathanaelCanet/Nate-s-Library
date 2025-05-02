@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="accueil">
+    <div class="style-container-accueil-title">
+        <p class="style-accueil-title">Searching for your next read ?</p>
+    </div>
+    <div class="style-form-search">
+        
+        <form class="form-inline" action="{{ url_for('books_search') }}" method="GET">
+            <button class="style-button-search" id="style-icon-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="style-form-input" type="search" id="book-search" name="search" placeholder="Enter a book title" required
+                aria-label="Search" autocomplete="off">
+            <button class="style-button-search" id="style-word-search" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
