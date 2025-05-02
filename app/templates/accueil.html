@@ -2,14 +2,23 @@
 {% block content %}
 <div class="accueil">
     <div class="style-container-accueil-title">
+        <div class="style-container-created-by">
+            <a href="https://www.linkedin.com/in/nathanaël-canet" target="_blank" rel="noopener noreferrer"><img
+                    class="style-litteraly-me" src="/static/images/created-by/litteraly-me.png" alt="Litteraly Me"></a>
+            <p class="style-created-by" id="style-created-by-text">&nbsp;Created by&nbsp;</p>
+            <a class="style-created-by-link" href="https://www.linkedin.com/in/nathanaël-canet" target="_blank" rel="noopener noreferrer">
+                <p class="style-created-by" id="style-name">Nathanaël Canet</p>
+            </a>
+        </div>
         <p class="style-accueil-title">Searching for your next read ?</p>
     </div>
     <div class="style-form-search">
-        
+
         <form class="form-inline" action="{{ url_for('books_search') }}" method="GET">
-            <button class="style-button-search" id="style-icon-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input class="style-form-input" type="search" id="book-search" name="search" placeholder="Enter a book title" required
-                aria-label="Search" autocomplete="off">
+            <button class="style-button-search" id="style-icon-search" type="submit"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="style-form-input" type="search" id="book-search" name="search"
+                placeholder="Enter a book title" required aria-label="Search" autocomplete="off">
             <button class="style-button-search" id="style-word-search" type="submit">Search</button>
         </form>
     </div>

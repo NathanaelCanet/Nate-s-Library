@@ -56,6 +56,40 @@ body{
 
 }
 
+.style-container-created-by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    margin-bottom : 10px;
+}
+
+.style-created-by{
+    font-family: TripSans-Regular;
+    font-size: 0.8em;
+    color: #000000;
+}
+
+#style-name{
+    margin:0px
+}
+
+.style-litteraly-me{
+    border-radius: 50px;
+    width : 2em;
+}
+#style-created-by-text{
+    margin-bottom : 0px;
+}
+#style-name{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.style-created-by-link{
+    text-decoration: none;
+    color: #000000;
+}
 
 /* ===========================
    3. Accueil Title Styles
@@ -68,10 +102,15 @@ body{
 
 .style-container-accueil-title{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width : 100%;
-    margin: 30px 0px 15px 0px; 
+    margin: 20px 0px 15px 0px; 
+}
+
+.style-container-created-by{
+    display: flex;
 }
 /* ===========================
    4. Accueil Styles
