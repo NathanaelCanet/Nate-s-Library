@@ -1,22 +1,30 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Search Results for "{{ query }}" in {{ search_type }}</h1>
-
+<h1 class="style-search-text">Search Results for "{{ query }}" in {{ search_type }}</h1>
 {% if results %}
-    <ul>
-        {% for result in results %}
-            <li>
-                {% if search_type == 'books' %}
-                    <strong>{{ result.title }}</strong> - {{ result.author_name }} - {{ result.category_name }}
-                {% elif search_type == 'categories' %}
-                    <strong>{{ result.category_name }}</strong>
-                {% elif search_type == 'authors' %}
-                    <strong>{{ result.author_name }}</strong>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
+<div class="album">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 justify-content-center">
+            {% for result in results %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="style-book" loading="lazy" src="/static/images/books/{{ result.image_url }}" alt="image" />
+                    <div class="card-body">
+                        <p class="card-text">
+                            <strong>{{ result.title }}</strong> <br>{{ result.price }} € <br> {{ result.author_name }} <br>
+                            <span class="titre">
+                                {{ result.category_name }}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% else %}
     <p>No results found for "{{ query }}" in {{ search_type }}.</p>
 {% endif %}
+   
 {% endblock content %}

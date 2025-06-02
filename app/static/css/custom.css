@@ -68,29 +68,35 @@ i.fa-regular.fa-heart:hover {
 
 }
 
+.navbar-toggler-icon{
+    color: #000000 !important;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        width : 25vw;
+    }
+
+}
+
 /* ===========================
    2. Custom Search Bar Styles
    =========================== */
 
-form.form-inline {
-    height: max-content;
-    width: 70%;
+form.form-inline{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow:
-        0 -1px 3px rgba(0, 0, 0, 0.2),
-        /* Top shadow (stronger and larger) */
-        0 1px 3px rgba(0, 0, 0, 0.2),
-        /* Bottom shadow (stronger and larger) */
-        0 3px 5px rgba(0, 0, 0, 0.2);
-    /* Bottom shadow (1px lower + slightly stronger) */
-    border-radius: 30px;
+    flex-direction : column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 70%;
+    height: fit-content;
 }
-
 
 input.form-control.mr-sm-2 {
     outline: none !important;
+    width : 100%;
     border-radius: 30px;
     border: none;
     outline: none;
@@ -101,8 +107,71 @@ input.form-control.mr-sm-2 {
     margin: 10px;
     font-size: 0.8em;
     font-family: TripSans-Regular !important;
+    font-size: 0.9em;
     /* Text size */
 }
 
 .form-control.mr-sm-2:focus {
     outline: none;}
+
+.form-select{
+    width: fit-content;
+    border-radius: 30px !important;
+    margin-inline : 10px;
+    font-family: TripSans-Bold !important;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+.form-select:focus{
+    outline: none !important;
+}
+
+.form-select option{
+    font-family: TripSans-Regular !important;
+    font-size: 0.8em;
+    /* Text size */
+}
+
+/* ===========================
+   3. Custom shop item
+   =========================== */
+
+   .col{
+     margin: 10px;
+  padding: 5px;
+
+  min-width: 0;
+  display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+   
+
+   .card.shadow-sm{
+    height : max-content !important;
+    border : none;
+    box-shadow : none;
+   }
+
+   .card-text{
+    font-family: TripSans-Medium !important;
+    font-size: 0.8em;
+    color: #000000;
+    max-width: fit-content;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+   }
+
+   .card-body{
+    width : fit-content;
+   }
+
+   .card-text strong{
+    width: fit-content;
+     display: block; 
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}

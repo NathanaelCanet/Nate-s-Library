@@ -3,14 +3,14 @@
 
 <div class="album">
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 justify-content-center">
             {% for book in books: %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <img class="book" loading="lazy" src="/static/images/books/{{ book.image_url }}" alt="image" />
+                    <img class="style-book" loading="lazy" src="/static/images/books/{{ book.image_url }}" alt="image" />
                     <div class="card-body">
                         <p class="card-text">
-                            {{ book.title }} <br>{{ book.price }} € <br>
+                            <strong>{{ book.title }}</strong> <br>{{ book.author_name }} <br>
                             <span class="titre">
                                 {{ book.category_name }}
                             </span>
